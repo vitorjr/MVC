@@ -9,8 +9,17 @@ namespace FinanceiroWeb.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IEnumerable<Noticia> todasAsNoticias;
+
+        public HomeController()
+        {
+            todasAsNoticias = new Noticia().TodasAsNoticias().OrderByDescending(x => x.Data);
+        }
+
         public ActionResult Index()
         {
+            var ultimasNoticias = todasAsNoticias.Take(3);
+            var todasAscategorias = todasAsNoticias.Select(x => x.Categoria);
             return View();
         }
 
