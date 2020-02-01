@@ -1,0 +1,71 @@
+﻿@model FinanceiroWeb.Models.Usuario
+@{
+	ViewBag.Title = "Usuario";
+}
+
+<h2>Usuario</h2>
+
+<h2>Validação de Usuários</h2>
+@using (Html.BeginForm())
+{
+
+	@Html.ValidationSummary(true)
+
+<fieldset>
+	<legend>Dados do usuario</legend>
+
+	<div class="editor-label">
+		@Html.LabelFor(Model => Model.Nome)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(Model => Model.Nome)
+		@Html.ValidationMessageFor(Model => Model.Nome)
+	</div>
+
+	<div class="editor-label">
+		@Html.LabelFor(Model => Model.Observacoes)
+	</div>
+	<div class="editor-field">
+		@Html.TextAreaFor(Model => Model.Observacoes)
+		@Html.ValidationMessageFor(Model => Model.Observacoes)
+	</div>
+
+	<div class="editor-label">
+		@Html.LabelFor(Model => Model.Email)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(Model => Model.Email)
+		@Html.ValidationMessageFor(Model => Model.Email)
+	</div>
+
+	<div class="editor-label">
+		@Html.LabelFor(Model => Model.Login)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(Model => Model.Login)
+		@Html.ValidationMessageFor(Model => Model.Login)
+	</div>
+
+	<div class="editor-label">
+		@Html.LabelFor(Model => Model.Senha)
+	</div>
+	<div class="editor-field">
+		@Html.PasswordFor(Model => Model.Senha)
+		@Html.ValidationMessageFor(Model => Model.Senha)
+	</div>
+
+	<div class="editor-label">
+		@Html.LabelFor(Model => Model.ConfirmarSenha)
+	</div>
+	<div class="editor-field">
+		@Html.PasswordFor(Model => Model.ConfirmarSenha)
+		@Html.ValidationMessageFor(Model => Model.ConfirmarSenha)
+	</div>
+	<br />
+	<p>
+		<input type="submit" value="cadastrar" />
+	</p>
+</fieldset>
+
+	@section Scripts{@Scripts.Render("~/bundles/jqueryval");}
+}

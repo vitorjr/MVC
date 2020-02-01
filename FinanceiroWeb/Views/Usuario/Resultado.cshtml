@@ -1,0 +1,54 @@
+﻿@model FinanceiroWeb.Models.Usuario
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Lista Usuarios</h2>
+
+<fieldset>
+	<legend>Dados do usuario</legend>
+
+	<div class="editor-label">
+		@Html.DisplayNameFor(Model => Model.Nome)
+	</div>
+	<div class="editor-field">
+		@Html.DisplayFor(Model => Model.Nome)
+	</div>
+
+	<div class="editor-label">
+		@Html.DisplayNameFor(Model => Model.Observacoes)
+	</div>
+	<div class="editor-field">
+		@Html.DisplayFor(Model => Model.Observacoes)
+	</div>
+
+	<div class="editor-label">
+		@Html.DisplayNameFor(Model => Model.Email)
+	</div>
+	<div class="editor-field">
+		@Html.DisplayFor(Model => Model.Email)
+	</div>
+
+	<div class="editor-label">
+		@Html.DisplayNameFor(Model => Model.Login)
+	</div>
+	<div class="editor-field">
+		@Html.DisplayFor(Model => Model.Login)
+	</div>
+
+	<div class="editor-label">
+		@Html.DisplayNameFor(Model => Model.Senha)
+	</div>
+	<div class="editor-field">
+		@Html.DisplayFor(Model => Model.Senha)
+	</div>
+
+	<div class="editor-label">
+		@Html.DisplayNameFor(Model => Model.ConfirmarSenha)
+	</div>
+	<div class="editor-field">
+		@Html.DisplayFor(Model => Model.ConfirmarSenha)
+	</div>
+	<br />
+	<p>@Html.ActionLink("Voltar", "Usuario")</p>
+</fieldset>
