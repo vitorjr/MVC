@@ -19,23 +19,28 @@ namespace FinanceiroWeb.Controllers
         public ActionResult Index()
         {
             var ultimasNoticias = todasAsNoticias.Take(3);
-            var todasAscategorias = todasAsNoticias.Select(x => x.Categoria);
-            return View();
+            var todasAscategorias = todasAsNoticias.Select(x => x.Categoria).Distinct().ToList();
+            ViewBag.Categorias = todasAscategorias;
+            return View(ultimasNoticias);
         }
 
-        public ActionResult About()
+        public ActionResult MostrarNoticia(int noticiaId, string titulo, string categoria)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(todasAsNoticias.FirstOrDefault(x => x.NoticiaId == noticiaId));
         }
 
-        public ActionResult Contact()
+        public ActionResult TodasAsNoticias()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(todasAsNoticias); 
         }
+
+        public ActionResult MostrarCategoria(string categoria)
+        {
+            var categoriaEspecifica = todasAsNoticias.Where(x => x.Categoria.ToLower() == categoria.ToLower()).ToList();
+            ViewBag.Categoria = categoria;
+            return View(categoriaEspecifica);
+        }
+       
         /*
         [HttpPost]
         public ActionResult AdicionarDespesa()

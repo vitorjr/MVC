@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="Models\Cartao.cs" />
     <Compile Include="Models\Despesas.cs" />
+    <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -169,6 +170,9 @@
     <Content Include="Views\Home\AdicionarDespesa.cshtml" />
     <Content Include="Views\Usuario\Resultado.cshtml" />
     <Content Include="Views\Usuario\Usuario.cshtml" />
+    <Content Include="Views\Home\TodasAsNoticias.cshtml" />
+    <Content Include="Views\Home\MostrarNoticia.cshtml" />
+    <Content Include="Views\Home\MostrarCategoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
