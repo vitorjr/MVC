@@ -14,6 +14,27 @@ namespace FinanceiroWeb
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name:"Todas as Noticias",
+                url:"noticias/",
+                defaults: new { controller = "Home", action = "TodasAsNoticias"}
+
+                );
+
+            routes.MapRoute(
+               name: "Categoria Especificas",
+               url: "noticias/{categoria}/",
+               defaults: new { controller = "Home", action = "MostrarCategoria", }
+
+               );
+
+            routes.MapRoute(
+               name: "Mostra Noticia",
+               url: "noticias/{categoria}/{titulo}-{noticiaId}",
+               defaults: new { controller = "Home", action = "MostrarNoticia", }
+
+               );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
