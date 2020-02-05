@@ -160,7 +160,6 @@ C:\FitBank\FinanceiroWeb\FinanceiroWeb\bin\pt-br\System.Web.WebPages.resources.d
 C:\FitBank\FinanceiroWeb\FinanceiroWeb\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\FitBank\FinanceiroWeb\FinanceiroWeb\bin\pt-br\System.Web.WebPages.Razor.resources.dll
 C:\FitBank\FinanceiroWeb\FinanceiroWeb\obj\Debug\FinanceiroWeb.csprojAssemblyReference.cache
-C:\FitBank\FinanceiroWeb\FinanceiroWeb\obj\Debug\FinanceiroWeb.csproj.CoreCompileInputs.cache
 C:\FitBank\FinanceiroWeb\FinanceiroWeb\obj\Debug\FinanceiroWeb.csproj.CopyComplete
 C:\FitBank\FinanceiroWeb\FinanceiroWeb\obj\Debug\FinanceiroWeb.dll
 C:\FitBank\FinanceiroWeb\FinanceiroWeb\obj\Debug\FinanceiroWeb.pdb
