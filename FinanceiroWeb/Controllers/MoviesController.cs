@@ -18,5 +18,20 @@ namespace FinanceiroWeb.Controllers
         };
             return View(movie);
         }
+
+        public ActionResult Edit(int moveid)
+        {
+            return Content("id=" + moveid);
+        }
+
+        public ActionResult Index(int? pageIndex, string sortBy)
+        {
+            if (!pageIndex.HasValue)
+                pageIndex = 1;
+
+            if (string.IsNullOrWhiteSpace(sortBy))
+                sortBy = "Name";
+            return Content(String.Format("PageIndex={0}&sortBy={1}", pageIndex,sortBy));
+        }
     }
 }
