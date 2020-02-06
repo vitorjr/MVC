@@ -176,6 +176,7 @@
     <Content Include="Views\Home\MostrarCategoria.cshtml" />
     <Content Include="Views\Sobre\Sobre.cshtml" />
     <Content Include="Views\Shared\_Topo.cshtml" />
+    <Content Include="Views\Shared\_Rodape.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

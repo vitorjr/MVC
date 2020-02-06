@@ -9,6 +9,8 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    
+    
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -19,22 +21,29 @@
                 </button>
                 @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Adicionar Despesa", "AdicionarDespesa", "Home")</li>
-                </ul>
-            </div>
+            
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Início", "Index", "Home")</li>
+            <li>@Html.ActionLink("Sobre", "About", "Home")</li>
+            <li>@Html.ActionLink("Adicionar Despesa", "AdicionarDespesa", "Home")</li>
+        </ul>
+    </div>
+       
         </div>
     </div>
+        
     <div class="container body-content">
+          
+            
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
-        </footer>
-    </div>
+        @if (IsSectionDefined("rodape")) {
+            @RenderSection("rodape")
+        }
+        else {
+            @Html.Partial("_Rodape")}
+</div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
