@@ -39,6 +39,13 @@ namespace FinanceiroWeb
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                "MoviesByReleaseDate",
+                "movies/released/{year}/{month}",
+                new { controller = "Movies", action = "ByReleaseDate"},
+                new { year = @"\d{4}", moth= @"\d{2}"}
+                );
         }
     }
 }
